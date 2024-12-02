@@ -3,7 +3,6 @@
     internal class Menu
     {
         Game game = new Game();
-        string userName;
         int userOption = 0;
 
         public void ShowMenu()
