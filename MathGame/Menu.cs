@@ -37,7 +37,7 @@
 
                     if (userOption == 5)
                     {
-                        int randomNumber = new Random().Next(1, 6);
+                        int randomNumber = new Random().Next(1, 5);
                         switch (randomNumber)
                         {
                             case 1: game.Sum(this); break;

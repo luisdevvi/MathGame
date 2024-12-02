@@ -1,8 +1,11 @@
-﻿namespace MathGame
+﻿using System.Diagnostics;
+
+namespace MathGame
 {
     internal class Game
     {
         Random random = new Random();
+        Stopwatch stopwatch = new Stopwatch();
 
         int numberOne = 0;
         int numberTwo = 0;
@@ -13,7 +16,7 @@
         public void Sum(Menu menu)
         {
             Console.Clear();
-            
+
             int userScore = 0;
 
             switch (menu.difficulty)
@@ -25,6 +28,8 @@
 
             Console.WriteLine("Sum game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
+            stopwatch.Start();
 
             for (int i = 0; i < 5; i++)
             {
@@ -49,11 +54,13 @@
                 Thread.Sleep(1000);
             }
 
-            Console.WriteLine($"Game result: {userScore} points\n");
+            stopwatch.Stop();
 
-            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
+            Console.WriteLine($"Game result: {userScore} points. Time spent: {stopwatch.Elapsed.Seconds} seconds.");
 
-            Console.WriteLine("You want to play another game? (y/n)");
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore} and spent {stopwatch.Elapsed.Seconds} seconds.");
+
+            Console.WriteLine("\nYou want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
 
             switch (anotherGameOption)
@@ -79,6 +86,8 @@
 
             Console.WriteLine("Subtraction game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
+            stopwatch.Start();
 
             for (int i = 0; i < 5; i++)
             {
@@ -107,11 +116,13 @@
                 Thread.Sleep(1000);
             }
 
-            Console.WriteLine($"Game result: {userScore} points\n");
+            stopwatch.Stop();
 
-            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
+            Console.WriteLine($"Game result: {userScore} points. Time spent: {stopwatch.Elapsed.Seconds} seconds.\n");
 
-            Console.WriteLine("You want to play another game? (y/n)");
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore} and spent {stopwatch.Elapsed.Seconds} seconds.");
+
+            Console.WriteLine("\nYou want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
 
             switch (anotherGameOption)
@@ -138,6 +149,8 @@
             Console.WriteLine("Multiplication game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
 
+            stopwatch.Start();
+
             for (int i = 0; i < 5; i++)
             {
                 numberOne = random.Next(1, 6);
@@ -161,11 +174,11 @@
                 Thread.Sleep(1000);
             }
 
-            Console.WriteLine($"Game result: {userScore} points\n");
+            Console.WriteLine($"Game result: {userScore} points. Time spent: {stopwatch.Elapsed.Seconds} seconds.\n");
 
-            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore} and spent {stopwatch.Elapsed.Seconds} seconds.");
 
-            Console.WriteLine("You want to play another game? (y/n)");
+            Console.WriteLine("\nYou want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
 
             switch (anotherGameOption)
@@ -191,6 +204,8 @@
 
             Console.WriteLine("Division game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
+            stopwatch.Start();
 
             for (int i = 0; i < 5; i++)
             {
@@ -219,9 +234,11 @@
                 Thread.Sleep(1000);
             }
 
-            Console.WriteLine($"Game result: {userScore} points\n");
+            stopwatch.Stop();
 
-            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
+            Console.WriteLine($"Game result: {userScore} points. Time spent: {stopwatch.Elapsed.Seconds} seconds.\n");
+
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore} and spent {stopwatch.Elapsed.Seconds} seconds.");
 
             Console.WriteLine("You want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
