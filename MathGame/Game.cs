@@ -67,15 +67,25 @@
         public void Subtraction(Menu menu)
         {
             Console.Clear();
+
             int userScore = 0;
+
+            switch (menu.difficulty)
+            {
+                case 1: difficultyRange = 11; break;
+                case 2: difficultyRange = 51; break;
+                case 3: difficultyRange = 101; break;
+            }
+
             Console.WriteLine("Subtraction game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
             for (int i = 0; i < 5; i++)
             {
                 do
                 {
-                    numberOne = random.Next(1, 11);
-                    numberTwo = random.Next(1, 11);
+                    numberOne = random.Next(1, difficultyRange);
+                    numberTwo = random.Next(1, difficultyRange);
                 } while (numberOne < numberTwo);
 
                 result = numberOne - numberTwo;
@@ -115,9 +125,19 @@
         public void Multiplication(Menu menu)
         {
             Console.Clear();
+
             int userScore = 0;
+
+            switch (menu.difficulty)
+            {
+                case 1: difficultyRange = 11; break;
+                case 2: difficultyRange = 51; break;
+                case 3: difficultyRange = 101; break;
+            }
+
             Console.WriteLine("Multiplication game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
             for (int i = 0; i < 5; i++)
             {
                 numberOne = random.Next(1, 6);
@@ -159,9 +179,19 @@
         public void Division(Menu menu)
         {
             Console.Clear();
+
             int userScore = 0;
+
+            switch (menu.difficulty)
+            {
+                case 1: difficultyRange = 11; break;
+                case 2: difficultyRange = 51; break;
+                case 3: difficultyRange = 101; break;
+            }
+
             Console.WriteLine("Division game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
             for (int i = 0; i < 5; i++)
             {
                 do
