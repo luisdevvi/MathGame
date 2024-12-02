@@ -28,18 +28,20 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
+
+                Console.WriteLine($"Current score: {userScore}");
             }
 
-            Console.WriteLine($"Game result: {userScore} points");
+            Console.WriteLine($"Game result: {userScore} points\n");
+
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
 
             Console.WriteLine("You want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
@@ -75,18 +77,20 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
+
+                Console.WriteLine($"Current score: {userScore}");
             }
 
-            Console.WriteLine($"Game result: {userScore} points");
+            Console.WriteLine($"Game result: {userScore} points\n");
+
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
 
             Console.WriteLine("You want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
@@ -118,18 +122,20 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
+
+                Console.WriteLine($"Current score: {userScore}");
             }
 
-            Console.WriteLine($"Game result: {userScore} points");
+            Console.WriteLine($"Game result: {userScore} points\n");
+
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
 
             Console.WriteLine("You want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
@@ -165,18 +171,20 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Console.WriteLine($"Current score: {userScore}\n");
                     Thread.Sleep(1000);
                 }
+
+                Console.WriteLine($"Current score: {userScore}");
             }
 
-            Console.WriteLine($"Game result: {userScore} points");
+            Console.WriteLine($"Game result: {userScore} points\n");
+
+            menu.gameHistory.Add($"Game: {DateTime.Now} - Player scored: {userScore}");
 
             Console.WriteLine("You want to play another game? (y/n)");
             string anotherGameOption = Console.ReadLine().ToLower();
