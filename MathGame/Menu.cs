@@ -23,6 +23,7 @@
             switch (userOption)
             {
                 case 1: game.Sum(this); break;
+                case 2: game.Subtraction(this); break;
                 default:
                     {
                         Console.WriteLine("Invalid option...");
