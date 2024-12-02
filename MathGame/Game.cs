@@ -8,17 +8,28 @@
         int numberTwo = 0;
         int result = 0;
         int userAnswer = 0;
+        int difficultyRange = 0;
 
         public void Sum(Menu menu)
         {
             Console.Clear();
+            
             int userScore = 0;
+
+            switch (menu.difficulty)
+            {
+                case 1: difficultyRange = 11; break;
+                case 2: difficultyRange = 51; break;
+                case 3: difficultyRange = 101; break;
+            }
+
             Console.WriteLine("Sum game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
+
             for (int i = 0; i < 5; i++)
             {
-                numberOne = random.Next(1, 11);
-                numberTwo = random.Next(1, 11);
+                numberOne = random.Next(1, difficultyRange);
+                numberTwo = random.Next(1, difficultyRange);
                 result = numberOne + numberTwo;
 
                 Console.WriteLine($"What's the result for the Sum of {numberOne} + {numberTwo}");

@@ -5,6 +5,7 @@
         Game game = new Game();
         public List<string> gameHistory = new List<string>();
         int userOption = 0;
+        public int difficulty = 0;
 
         public void ShowMenu()
         {
@@ -19,6 +20,12 @@
             Console.WriteLine("5 - View Game History");
             Console.WriteLine("0 - Exit Game\n");
             userOption = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nSelect the diffculty of game:\n");
+            Console.WriteLine("1 - Easy");
+            Console.WriteLine("2 - Normal");
+            Console.WriteLine("3 - Hard\n");
+            difficulty = int.Parse(Console.ReadLine());
 
             switch (userOption)
             {
