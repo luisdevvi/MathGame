@@ -8,11 +8,11 @@
         int numberTwo = 0;
         int result = 0;
         int userAnswer = 0;
-        int userScore = 0;
 
-        public void Sum()
+        public void Sum(Menu menu)
         {
             Console.Clear();
+            int userScore = 0;
             Console.WriteLine("Sum game: for each correct answer, score +1 point.\n");
             Thread.Sleep(1000);
             for (int i = 0; i < 5; i++)
@@ -41,13 +41,15 @@
 
             Console.WriteLine($"Game result: {userScore} points");
 
-            //Console.WriteLine("You want to play another game? Y/N");
-            //string anotherGameOption = Console.ReadLine().ToLower();
+            Console.WriteLine("You want to play another game? (y/n)");
+            string anotherGameOption = Console.ReadLine().ToLower();
 
-            //if (anotherGameOption == "y")
-            //{
-
-            //}
+            switch (anotherGameOption)
+            {
+                case "y": Sum(menu); break;
+                case "n": menu.ShowMenu(); break;
+                default: Console.WriteLine("Invalid option... "); break;
+            }
         }
     }
 }
