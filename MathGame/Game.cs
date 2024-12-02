@@ -12,6 +12,9 @@
 
         public void Sum()
         {
+            Console.Clear();
+            Console.WriteLine("Sum game: for each correct answer, score +1 point.\n");
+            Thread.Sleep(1000);
             for (int i = 0; i < 5; i++)
             {
                 numberOne = random.Next(1, 11);

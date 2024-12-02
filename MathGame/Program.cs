@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.Sum();
+            Menu menu = new Menu();
+
+            menu.ShowMenu();
         }
     }
 }
