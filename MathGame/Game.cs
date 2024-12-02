@@ -28,15 +28,14 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Thread.Sleep(1000);
                 }
 
-                Console.WriteLine($"Current score: {userScore}");
+                Console.WriteLine($"Current score: {userScore}\n");
+                Thread.Sleep(1000);
             }
 
             Console.WriteLine($"Game result: {userScore} points\n");
@@ -77,15 +76,14 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Thread.Sleep(1000);
                 }
 
-                Console.WriteLine($"Current score: {userScore}");
+                Console.WriteLine($"Current score: {userScore}\n");
+                Thread.Sleep(1000);
             }
 
             Console.WriteLine($"Game result: {userScore} points\n");
@@ -122,15 +120,14 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Thread.Sleep(1000);
                 }
 
-                Console.WriteLine($"Current score: {userScore}");
+                Console.WriteLine($"Current score: {userScore}\n");
+                Thread.Sleep(1000);
             }
 
             Console.WriteLine($"Game result: {userScore} points\n");
@@ -171,15 +168,14 @@
                 {
                     Console.WriteLine("Yay, you got it right! You score +1 point!");
                     userScore += 1;
-                    Thread.Sleep(1000);
                 }
                 else
                 {
                     Console.WriteLine("Oh no, you got it wrong!");
-                    Thread.Sleep(1000);
                 }
 
-                Console.WriteLine($"Current score: {userScore}");
+                Console.WriteLine($"Current score: {userScore}\n");
+                Thread.Sleep(1000);
             }
 
             Console.WriteLine($"Game result: {userScore} points\n");
