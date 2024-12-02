@@ -25,6 +25,7 @@
                 case 1: game.Sum(this); break;
                 case 2: game.Subtraction(this); break;
                 case 3: game.Multiplication(this); break;
+                case 4: game.Division(this); break;
                 default:
                     {
                         Console.WriteLine("Invalid option...");
